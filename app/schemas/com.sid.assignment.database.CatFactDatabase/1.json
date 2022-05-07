@@ -1,0 +1,38 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "80f7911de21253f032195b6370bf64e3",
+    "entities": [
+      {
+        "tableName": "catfacts",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`catfact` TEXT NOT NULL, `catImg` BLOB)",
+        "fields": [
+          {
+            "fieldPath": "catFactText",
+            "columnName": "catfact",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "catImg",
+            "columnName": "catImg",
+            "affinity": "BLOB",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '80f7911de21253f032195b6370bf64e3')"
+    ]
+  }
+}

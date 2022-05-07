@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CatFacts</string>
+    <string name="cat_image">Cat Random Image</string>
+    <string name="refresh">Refresh</string>
+</resources>
